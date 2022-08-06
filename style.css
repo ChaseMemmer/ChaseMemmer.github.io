@@ -57,10 +57,29 @@ nav ul {
  filter: blur(30px);
 }
 
-.container{
+.container {
     overflow: hidden;
-    width: 50px;
-    height: 50px;
+    position:absolute;
+    border-radius: 3%;
+    left: 40px;
+    top: 60px;
+    width: 275px;
+    height: 350px;
+    z-index: 1;
+}
+.container img {
+    transition: all 0.3s ease-in-out;
+}
+
+#ProfilePic {
+    width: 275px;
+    height: 350px;
+    border-radius: 3%;
+    z-index: 1;
+}
+
+#ProfilePic:hover{
+    transform: scale(1.154);
 }
 
 #HelloPic{
@@ -69,16 +88,6 @@ nav ul {
     top: 55px; 
     height: 210px; 
     width: 200px; 
-    z-index: 1;
-}
-
-#ProfilePic {
-    position:absolute;
-    left: 40px;
-    top: 60px;
-    width: 275px;
-    height: 350px;
-    border-radius: 3%;
     z-index: 1;
 }
 
@@ -94,15 +103,58 @@ nav ul {
 #QuickInfoQs{
     position: absolute;
     text-align: left;
-    top: 100%;
-    line-height: 100%;
+    top: 90%;
+    line-height: 90%;
 }
 
 #QuickInfoAs{
     position: absolute;
-    top: 100%;
+    top: 90%;
     left: 50%;
     text-align: left;
-    line-height: 100%;
+    line-height: 90%;
     color: #333;
+}
+
+.colorful:hover {
+    color: rgb(14, 70, 155);
+    font-weight: 500;
+}
+
+button {
+  position: absolute;
+  left: 50%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  z-index: 1;
+  background-color: rgb(45, 95, 170);
+  font-size: 125%;
+}
+
+#button1 {
+  top: 85%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.button {
+  display: block;
+  width: 275px;
+  height: 65px;
+  cursor: pointer;
+  transition: box-shadow 0.1s linear;
+}
+
+.button:hover {
+    box-shadow: 0 10px 0 rgb(48, 89, 151);
+  }
+
+/* =========================================
+# Resume Page
+========================================= */
+
+#ResumeViewer {
+    position: absolute;
+    left: 10%;
+    top: 10%;
 }
