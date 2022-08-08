@@ -8,19 +8,25 @@
     <link rel="stylesheet" href="NavigationBar.css">
 </head>
 <body>
+
+    <!-- Navigation Bar (add more <li> to expand)-->
     <nav>
         <ul>
-            <li><a href="../">Home</a></li>
+            <li><a href="../ChaseMemmer.github.io/">Home</a></li>
             <li><a href="/Resume">Resume</a></li>
-            <li><a href="/Technical">Technical</a></li>
-            <li><a href="/Non-Technical">Non-Technical</a></li>
-            <li><a href="/Timeline">Timeline</a></li>
-            <li><a href="/Contact">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="blurred-box">
-        <div class="container">
+    <!-- Background (Hides Nav bar if initialized first)-->
+    <div> 
+        <div id="particles-js"></div>
+        <script type="text/javascript" src="/assets/particles.js"></script>
+        <script type="text/javascript" src="/assets/app.js"></script>
+    </div>
+
+    <!-- Initial Summary Box-->
+    <div class="ProfileOutline">
+        <div class="PicContainer">
             <img id="ProfilePic" src="/assets/Pictures/ProfilePic.jpg"/>
         </div>
         <img id="HelloPic" src="/assets/Icons/Hello.svg"/>
@@ -28,16 +34,14 @@
             <p style="font-size:170%"> I'm <b>Chase Memmer</b></p>
             <p> Mechanical and Electrical Engineer</p>
             <br style="line-height: 30%">
-            <hr style="width:130%", size="1", color=#666>
+            <hr style="width:130%", size="1", color=#444>
             <div id="QuickInfoQs">
-                <p>Age</p>
                 <p>Phone</p>
                 <p>Email</p>
-                <p>Home</p>
-                <p> Relocate? </p>
+                <p>Location</p>
+                <p>Relocate?</p>
             </div>
             <div id="QuickInfoAs">
-                <p class="colorful"> 22 </p>
                 <p class="colorful"> 727-410-1943 </p>
                 <p class="colorful"> ChaseMemmer@gmail.com</p>
                 <p class="colorful"> Tampa, Florida</p>
@@ -48,12 +52,57 @@
         <script type="text/javascript" src="/assets/button.js"></script>
     </div>
 
-    <div> 
-        <div id="particles-js"></div>
-        <script type="text/javascript" src="/assets/particles.js"></script>
-        <script type="text/javascript" src="/assets/app.js"></script>
+    <div class="AboutMeOutline">
+        <h1 style="line-height: 10px;">About Me</h1>
+        <img src="/assets/Icons/ScrollOrnament.svg" height="20px">
+        <p><em>Imaginative. Knowledgeable. Successful</em></p>
+        <p style="width: 80%; margin-left: 10%;">A multi-disiplinary professional that can handle all 
+            aspects of hardware and related software. Highly motivated to leave a lasting mark on the 
+            industry. 
+        </p>
+
+        <div class="accordion-menu">
+            <ul class="AboutMe">
+                <li>
+                    <input type="checkbox" checked>
+                    <i class="arrow"></i>
+                    <h2>Career Goals</h2>
+                    <p>I'm aiming to work in Research and Development for a company specializing
+                        in mechatronics/robotics. Ideally, this company would produce prosthetics,
+                        exoskeletons or other human-augmentation technology.
+                    </p>
+                </li>
+            </ul>
+            <hr style="width:100%", size="1", color=#444>
+            <ul class="AboutMe">
+                <li>
+                    <input type="checkbox" checked>
+                    <i class="arrow"></i>
+                    <h2>Why Robotics?</h2>
+                    <p>I got my first profesisonal engineering job at 15 and have been narrowing
+                       my focus ever since. Robotics has consistently excited me and I have 
+                       the skills to excel at it. Also, I think prosthetics and exoskeletons are just extremely
+                       cool and I enjoy working with them.
+                    </p>
+                </li>
+            </ul>
+            <hr style="width:100%", size="1", color=#444>
+            <ul class="AboutMe">
+                <li>
+                    <input type="checkbox" checked>
+                    <i class="arrow"></i>
+                    <h2>My Philosophy</h2>
+                    <p>I try to follow the Bayesian school of thought, which includes trying
+                        to assign probabilities, expected values and risk-benefit ratios for 
+                        logical problems. Regarding exoskeletons/prosthetics, I take a 
+                        transhumanist approach and want to expand usage beyond people with 
+                        disabilities.
+                    </p>
+                </li>
+            </ul>
+        </div>
     </div>
-    
+
 
 
 </body>

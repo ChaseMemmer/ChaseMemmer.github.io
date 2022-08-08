@@ -30,34 +30,34 @@ nav ul {
     list-style: none;
 }
 
-/* =========================================
-# Home Page
+/* ======================================
+Profile Box
 ========================================= */
-.blurred-box{
-  position: absolute;
-  width: 800px;
-  height: 600px;
-  top: calc(40% - 250px);
-  left: calc(50% - 400px);
-  border-radius: 25px;
-  overflow: hidden;
-  z-index: 0;
+.ProfileOutline{
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    top: calc(40% - 250px);
+    left: calc(50% - 400px);
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 0;
 }
 
-.blurred-box:after{
- content: '';
- width: 850px;
- height: 500px;
- position: absolute;
- left: -25px;
- right: -25px;
- top: -25px;  
- bottom: 0;
- box-shadow: inset 0 0 0 300px rgba(255,255,255,0.5);
- filter: blur(30px);
+.ProfileOutline:after{
+    content: '';
+    width: 850px;
+    height: 475px;
+    position: absolute;
+    left: -25px;
+    right: -25px;
+    top: -25px;  
+    bottom: 0;
+    box-shadow: inset 0 0 0 300px rgba(255,255,255,0.4);
+    filter: blur(30px);
 }
 
-.container {
+.PicContainer {
     overflow: hidden;
     position:absolute;
     border-radius: 3%;
@@ -67,7 +67,7 @@ nav ul {
     height: 350px;
     z-index: 1;
 }
-.container img {
+.PicContainer img {
     transition: all 0.3s ease-in-out;
 }
 
@@ -122,32 +122,113 @@ nav ul {
 }
 
 button {
-  position: absolute;
-  left: 50%;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  z-index: 1;
-  background-color: rgb(45, 95, 170);
-  font-size: 125%;
+    position: absolute;
+    left: 50%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    z-index: 1;
+    background-color: rgb(45, 95, 170);
+    font-size: 125%;
 }
 
 #button1 {
-  top: 85%;
-  transform: translate3d(-50%, -50%, 0);
+    top: 475px;
+    transform: translate3d(-50%, -50%, 0);
 }
 
 .button {
-  display: block;
-  width: 275px;
-  height: 65px;
-  cursor: pointer;
-  transition: box-shadow 0.1s linear;
+    display: block;
+    width: 275px;
+    height: 65px;
+    cursor: pointer;
+    transition: box-shadow 0.1s linear;
 }
 
 .button:hover {
     box-shadow: 0 10px 0 rgb(48, 89, 151);
   }
+
+/* =========================================
+# About Me
+========================================= */
+
+.AboutMeOutline{
+    position: absolute;
+    width: 800px;
+    height: auto;
+    top: 90%;
+    left: calc(50% - 400px); /* 400 = 800/2 */
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 0;
+    background-color: rgba(255,255,255,0.3);
+    padding-top: 10px;
+    overflow-y: visible;
+}
+
+.accordion-menu {
+	display: inline-block;
+    position: relative;
+	left: 40%;
+    max-width: 80%;
+	transform: translate(-50%, 0);
+	border-radius: 3%;
+}
+div ul {
+	list-style: none;
+	padding: 0 20px 10px;
+    background-color: rgba(255,255,255,0.3);
+	border-radius: 5px;
+}
+div ul li {
+	position: relative;
+	padding-top: 1px;
+}
+ul li .arrow {
+	position: absolute;
+	transform: translate(-12px, 0);
+	margin-top: 30px;
+	right: 0;
+}
+
+ul li .arrow:before, ul li .arrow:after {
+	content: "";
+	position: absolute;
+	background-color: rgb(45, 95, 170);
+	width: 4px;
+	height: 18px;
+}
+ul li .arrow:before {
+	transform: translate(-5px, 0) rotate(45deg);
+}
+ul li .arrow:after {
+	transform: translate(5px, 0) rotate(-45deg);
+}
+ul li input[type=checkbox] {
+	position: absolute;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+    z-index: 1;    
+    opacity: 0;
+}
+ul li input[type=checkbox]:checked ~ p {
+	margin-top: 0;
+	max-height: 0;
+	opacity: 0;
+	transform: translate(0, 50%);
+}
+ul li input[type=checkbox]:checked ~ .arrow:before {
+	transform: translate(5px, 0) rotate(45deg);
+}
+ul li input[type=checkbox]:checked ~ .arrow:after {
+	transform: translate(-5px, 0) rotate(-45deg);
+}
+.transition, p, ul li .arrow:before, ul li .arrow:after {
+	transition: all 0.5s ease-out;
+}
+
 
 /* =========================================
 # Resume Page
