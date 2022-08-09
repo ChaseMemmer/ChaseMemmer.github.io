@@ -10,7 +10,7 @@ body {
 
 #particles-js
 {
-    height:100%;
+    height:200%;
     background: #262626;
 }
 
@@ -119,6 +119,7 @@ Profile Box
 .colorful:hover {
     color: rgb(14, 70, 155);
     font-weight: 500;
+    transition: 0s;
 }
 
 button {
@@ -150,20 +151,29 @@ button {
   }
 
 /* =========================================
+# Middle Section Container
+========================================= */
+
+#About_Skills {
+    border-color: #fff;
+    position: absolute;
+    top: 80%;
+    left: calc(50% - 400px);   /* 400 = 800/2 */
+    width: 800px;
+    height: auto;
+}
+
+/* =========================================
 # About Me
 ========================================= */
 
 .AboutMeOutline{
-    position: absolute;
-    width: 800px;
-    height: auto;
-    top: 90%;
-    left: calc(50% - 400px); /* 400 = 800/2 */
-    border-radius: 25px;
-    overflow: hidden;
+    position: relative;
     z-index: 0;
     background-color: rgba(255,255,255,0.3);
     padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 3%;
     overflow-y: visible;
 }
 
@@ -174,10 +184,11 @@ button {
     max-width: 80%;
 	transform: translate(-50%, 0);
 	border-radius: 3%;
+    font-size: 110%;
 }
 div ul {
 	list-style: none;
-	padding: 0 20px 10px;
+	padding: 0 20px 1px;
     background-color: rgba(255,255,255,0.3);
 	border-radius: 5px;
 }
@@ -229,6 +240,57 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 	transition: all 0.5s ease-out;
 }
 
+/* =========================================
+# Skills
+========================================= */
+.SkillsOutline{
+    position: relative;
+    margin-top: 10%;
+    border-radius: 3%;
+    z-index: 0;
+    background-color: rgba(255,255,255,0.3);
+    padding: 10px 50px 0px;
+    overflow-y: visible;
+
+}
+
+.SkillsOutline p {
+    text-align: left;
+    margin-left: 0px;
+    font-size: larger;
+}
+
+.skill {
+    float: left;
+    position: relative;
+    margin: 0 0 20px 10px;
+    border-style: solid;
+    border: #fff;
+    background-color: blue;
+    width: auto;
+    height: 50px;
+    z-index: 2;
+
+}
+
+.skill img {
+    position: relative;
+    display: inline;
+    width: 30px;
+    height: 30px;
+    border-radius: 3%;
+    z-index: 1;
+    margin: 10px;
+}
+
+.skill span {
+    font-size: larger;
+    font-weight: 600;
+    position: relative;
+    top: -19px;
+    left: -10px;
+    margin: 10px;
+}
 
 /* =========================================
 # Resume Page
