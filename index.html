@@ -52,13 +52,16 @@
         <script type="text/javascript" src="/assets/button.js"></script>
     </div>
 
-    <section id="About_Skills">
+    <section id="InfoContainer">
 
     <!-- About Me -->
     <div class="AboutMeOutline">
         <h1 style="line-height: 10px;">About Me</h1>
         <img src="/assets/Icons/ScrollOrnament.svg" height="20px">
-        <p><em>Imaginative. Knowledgeable. Successful.</em></p>
+        <p></p>
+        <span class="colorful"><em>Imaginative. </em></span>
+        <span class="colorful"><em>Knowledgeable.</em></span>
+        <span class="colorful"><em>Successful.</em></span>
         <p style="width: 80%; margin-left: 10%;">A multi-disiplinary professional that can handle all 
             aspects of hardware and related software. Highly motivated to leave a lasting mark on the 
             industry. 
@@ -109,53 +112,156 @@
 
     <!-- Skills -->
     <div class="SkillsOutline">
-        <h1 style="line-height: 10px;">Skills</h1>
+        <h1 style="line-height: 10px;">Software Skills</h1>
         <img src="/assets/Icons/ScrollOrnament.svg" height="20px">
+
+        <!--
+            Format is:
+            <div class="skill"></div> as the container
+
+            <img> for logos (found in /assets/Icons)
+            <span> for title
+        -->
 
         <p class="colorful">I am confident using:</p> 
             <div class="skill"> 
-                <img id="temp" src="/assets/Pictures/ProfilePic.jpg">
-                <span>temp</span>
+                <img src="/assets/Icons/Solidworks.png">
+                <span>SolidWorks</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/Matlab.png">
+                <span>MATLAB</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/LTSpice.png">
+                <span>LTSpice/Cadence</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/KiCad.png">
+                <span>KiCAD</span>
             </div>
             <hr style="width:88%", size="1", color=#444>
 
         <p class="colorful">I have used in past projects:</p> 
             <div class="skill"> 
-                <img id="temp" src="/assets/Pictures/ProfilePic.jpg">
-                <span>Long</span>
+                <img src="/assets/Icons/LabView.jpg">
+                <span>Labview</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/AutoCad.png">
+                <span>AutoCAD</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/CoppeliaSim.png">
+                <span>CoppeliaSim</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/ProgrammingC.png">
+                <span>C</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/Excel.png">
+                <span>Excel VBA</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/Arduino.png">
+                <span>Arduino</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/Python.png">
+                <span>Python</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/html.png">
+                <span>HTML</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/css.png">
+                <span>CSS</span>
             </div>
             <hr style="width:88%", size="1", color=#444>
 
         <p class="colorful">I am currently learning more about:</p> 
             <div class="skill"> 
-                <img id="temp" src="/assets/Pictures/ProfilePic.jpg">
-                <span>Longer</span>
+                <img src="/assets/Icons/RobotHead.png">
+                <span>Machine Learning</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/ProgrammingC.png">
+                <span>C</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/Python.png">
+                <span>Python</span>
+            </div>
+            <div class="skill"> 
+                <img src="/assets/Icons/CoppeliaSim.png">
+                <span>CoppeliaSim</span>
             </div>
             <hr style="width:88%", size="1", color=#444>
 
         <p class="colorful">I have certifications in:</p> 
-        <div class="skill"> 
+        <!-- <div class="skill"> 
             <img id="temp" src="/assets/Pictures/ProfilePic.jpg">
             <span>Longest</span>
-        </div>
-        <div class="skill"> 
-            <img id="temp" src="/assets/Pictures/ProfilePic.jpg">
-            <span>Longest</span>
-        </div>
-        <div class="skill"> 
-            <img id="temp" src="/assets/Pictures/ProfilePic.jpg">
-            <span>Longest</span>
-        </div>
-        <div class="skill"> 
-            <img id="temp" src="/assets/Pictures/ProfilePic.jpg">
-            <span>Longest</span>
-        </div>
-        <div class="skill"> 
-            <img id="temp" src="/assets/Pictures/ProfilePic.jpg">
-            <span>Longest</span>
-        </div>
+        </div> -->
+        <p><em>(Currently scheduled for several certification test)</em></p>
+        
         <hr style="width:88%", size="1", color=#666>
     </div>
+    
+
+    <!-- Timeline -->
+    
+    <div class="Timeline">
+        <h1 style="line-height: 10px;">Timeline</h1>
+        <img src="/assets/Icons/ScrollOrnament.svg" height="20px">
+
+        <div class="TimelineHeader">
+            <span style="float: left; margin-left:10px">Technical Projects</span>
+            <span style="float: right; margin-right: 10px">Non-Technical Emprises</span>
+            <br>
+            <p> Today </p>
+            <div class="Today"></div>
+            <div class="Line"></div>
+        </div>
+        <div class="TimelineEntry">
+            <div class="centerline"></div>
+            <div class="marker"></div>
+            
+            <div class="Left">
+                <div class="OnTop">
+                    <img src="/assets/Icons/Arduino.png">
+                    <img src="/assets/Icons/AutoCad.png">
+                    <img src="/assets/Icons/CoppeliaSim.png">
+                </div>
+                <h1>Title</h1>
+                <h2>Keyword1. Keyword2. Keywore3.</h2>
+                <p>Description</p>
+                <img src="/assets/Pictures/ProfilePic.jpg">
+            </div>
+            <div class="Right"></div>
+        </div>
+        <hr>
+        <div class="TimelineEntry">
+            <div class="centerline"></div>
+            <div class="marker"></div>
+            <div class="Left"></div>
+            <div class="Right">
+                <div class="OnTop">
+                    <img src="/assets/Icons/Arduino.png">
+                    <img src="/assets/Icons/AutoCad.png">
+                    <img src="/assets/Icons/CoppeliaSim.png">
+                </div>
+                <h1>Title</h1>
+                <h2>Keywords</h2>
+                <p>Description</p>
+                <img src="/assets/Pictures/ProfilePic.jpg">
+            </div>
+        </div>
+
+    </div>
     </section>
+
 </body>
 </html>

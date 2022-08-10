@@ -154,7 +154,7 @@ button {
 # Middle Section Container
 ========================================= */
 
-#About_Skills {
+#InfoContainer {
     border-color: #fff;
     position: absolute;
     top: 80%;
@@ -251,7 +251,6 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     background-color: rgba(255,255,255,0.3);
     padding: 10px 50px 0px;
     overflow-y: visible;
-
 }
 
 .SkillsOutline p {
@@ -264,11 +263,13 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     float: left;
     position: relative;
     margin: 0 0 20px 10px;
+    background-color: #555;
+    border-radius: 25px;
     border-style: solid;
-    border: #fff;
-    background-color: blue;
+    border-color: #262626;
+    border-width: 1px;
     width: auto;
-    height: 50px;
+    height: 40px;
     z-index: 2;
 
 }
@@ -276,20 +277,170 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 .skill img {
     position: relative;
     display: inline;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 3%;
     z-index: 1;
-    margin: 10px;
+    margin: 8px 6px 7px 10px;
 }
 
 .skill span {
-    font-size: larger;
-    font-weight: 600;
+    font-size: large;
+    font-weight: 400;
     position: relative;
-    top: -19px;
+    top: -13px;
     left: -10px;
     margin: 10px;
+}
+
+/* =========================================
+# Timeline
+========================================= */
+.Timeline {
+    position: relative;
+    margin-top: 10%;
+    z-index: 0;
+    background-color: rgba(255,255,255,0.3);
+    padding: 10px 50px 25px;
+    overflow-y: visible;
+    border-radius: 3%;
+}
+
+.Timeline span {
+    font-size: larger;
+}
+
+.Timeline p {
+    font-size: larger;
+}
+
+.TimelineHeader {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    background-color: aqua;
+    z-index: 1;
+}
+
+.Today {
+    position: relative;
+    margin: auto;
+    width: 75px;
+    height: 50px;
+    background-color: rgb(45, 95, 170);
+    color: #fff;
+    border-style: hidden;
+    border-radius:25px;
+    font-size: large;
+    padding: 5px 0 0 0;
+}
+
+.Line {
+    position: relative;
+    margin: auto;
+    width: 8px;
+    height: 35px;
+    background-color: rgba(45, 95, 170,0.5);
+    border-style: hidden;
+}
+
+.TimelineEntry {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 75px;
+    /*background-color: red;*/
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+.centerline {
+    position: absolute;
+    left: calc(50% - 4px);
+    width: 8px;
+    height: 100%;
+    background-color: rgba(45, 95, 170,0.5);
+    border-style: hidden;
+    z-index: 1;
+}
+
+.marker {
+    position: absolute;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(45, 95, 170,1.0);
+    border-style: hidden;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.Left, .Right{
+    position: relative;
+    top: 0;
+    width: 43%;
+    height: 100px;
+    z-index: 3;
+    overflow: hidden;
+    
+    transition: all 0.3s ease-in-out;
+}
+
+.Left {
+    float: left;
+    background-color: green;
+}
+
+.Right {
+    float: right;
+    background-color: purple;
+}
+
+/*
+.Left:hover, .Right:hover {
+    transform: scale(1.15);
+    height: 300px;
+}
+*/
+
+.Left h1, .Right h1, .Left h2, .Right h2 {
+    font-size: small;
+    text-align: left;
+    padding: 0 0 0 20px;
+}
+
+.Left h1, .Right h1, .Left h2, .Right h2 {
+    font-size: small;
+    text-align: left;
+}
+
+.OnTop {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: #262626;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.0;
+    margin: 0 0 0 0;
+}
+
+.OnTop img {
+    position: relative;
+    display: inline-block;
+    transform: translate(0%, 25%);
+    width: 50px;
+    height: 50px;
+    border-radius: 3%;
+    z-index: 1;
+}
+
+.OnTop:hover {
+    opacity: 1.0;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* =========================================
