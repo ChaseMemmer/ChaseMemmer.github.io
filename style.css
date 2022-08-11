@@ -10,7 +10,7 @@ body {
 
 #particles-js
 {
-    height:250%;
+    height:300%;
     background: #262626;
 }
 
@@ -60,7 +60,7 @@ Profile Box
 .PicContainer {
     overflow: hidden;
     position:absolute;
-    border-radius: 3%;
+    border-radius: 25px;
     left: 40px;
     top: 60px;
     width: 275px;
@@ -74,7 +74,7 @@ Profile Box
 #ProfilePic {
     width: 275px;
     height: 350px;
-    border-radius: 3%;
+    border-radius: 25px;
     z-index: 1;
 }
 
@@ -173,8 +173,12 @@ button {
     background-color: rgba(255,255,255,0.3);
     padding-top: 10px;
     padding-bottom: 20px;
-    border-radius: 3%;
+    border-radius: 25px;
     overflow-y: visible;
+}
+
+.AboutMeOutline p, .AboutMeOutline span {
+    font-size: large;
 }
 
 .accordion-menu {
@@ -183,7 +187,7 @@ button {
 	left: 40%;
     max-width: 80%;
 	transform: translate(-50%, 0);
-	border-radius: 3%;
+	border-radius: 25px;
     font-size: 110%;
 }
 div ul {
@@ -246,7 +250,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 .SkillsOutline{
     position: relative;
     margin-top: 10%;
-    border-radius: 3%;
+    border-radius: 25px;
     z-index: 0;
     background-color: rgba(255,255,255,0.3);
     padding: 10px 50px 0px;
@@ -279,7 +283,6 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     display: inline;
     width: 25px;
     height: 25px;
-    border-radius: 3%;
     z-index: 1;
     margin: 8px 6px 7px 10px;
 }
@@ -317,6 +320,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     margin-top: 53px;
     font-size: larger;
     font-weight: bolder;
+    /* text-decoration: underline; */
 }
 
 .Today {
@@ -324,12 +328,11 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     margin: auto;
     width: 75px;
     height: 50px;
-    background-color: rgb(45, 95, 170);
+    background-color: rgb(48, 89, 151);
     color: #fff;
     border-style: hidden;
     border-radius:25px;
     font-size: large;
-    padding: 0px 0 0 0;
 }
 
 .Today p {
@@ -421,6 +424,10 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     border-color: rgb(0, 45, 112); 
 }
 
+.Highlight {
+    background-color: rgb(88, 113, 150); 
+}
+
 .Left h1, .Right h1 {
     font-size: large;
     text-align: left;
@@ -458,7 +465,6 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     transform: translate(0%, 25%);
     width: 50px;
     height: 50px;
-    border-radius: 3%;
     z-index: 1;
 }
 
