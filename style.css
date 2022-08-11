@@ -10,7 +10,7 @@ body {
 
 #particles-js
 {
-    height:200%;
+    height:250%;
     background: #262626;
 }
 
@@ -303,25 +303,20 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     background-color: rgba(255,255,255,0.3);
     padding: 10px 50px 25px;
     overflow-y: visible;
-    border-radius: 3%;
+    border-radius: 25px;
 }
-
-.Timeline span {
-    font-size: larger;
-}
-
-.Timeline p {
-    font-size: larger;
-}
-
+/* Header */
 .TimelineHeader {
     position: relative;
-    margin: auto;
     width: 100%;
     height: auto;
-    margin-top: 20px;
-    background-color: aqua;
     z-index: 1;
+}
+
+.TimelineHeader span {
+    margin-top: 53px;
+    font-size: larger;
+    font-weight: bolder;
 }
 
 .Today {
@@ -334,88 +329,117 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     border-style: hidden;
     border-radius:25px;
     font-size: large;
-    padding: 5px 0 0 0;
+    padding: 0px 0 0 0;
+}
+
+.Today p {
+    color: #262626;
+    line-height: 45px;
+    font-style: italic;
+    font-weight: 600;
 }
 
 .Line {
     position: relative;
     margin: auto;
     width: 8px;
-    height: 35px;
-    background-color: rgba(45, 95, 170,0.5);
+    height: 40px;
+    background-color: rgba(45, 95, 170,0.4);
     border-style: hidden;
 }
 
+/* Footer */
+.TimelineFooter {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    overflow: visible;
+}
+
+.Line2 {
+    position: absolute;
+    left: calc(50% - 4px);
+    width: 8px;
+    height: 20px;
+    top: -35%;
+    background-color: rgba(45, 95, 170,0.4);
+    border-style: hidden;
+}
+
+/* Timeline Middle */
 .TimelineEntry {
     position: relative;
     margin: auto;
     width: 100%;
     height: 75px;
-    /*background-color: red;*/
     z-index: 1;
-    overflow: hidden;
 }
-
 
 .centerline {
     position: absolute;
     left: calc(50% - 4px);
+    top: -12%;
     width: 8px;
-    height: 100%;
-    background-color: rgba(45, 95, 170,0.5);
-    border-style: hidden;
+    height: 125%;
+    background-color: rgba(45, 95, 170,0.4);
     z-index: 1;
 }
 
 .marker {
     position: absolute;
-    left: calc(50% - 20px);
-    top: calc(50% - 20px);
-    width: 40px;
-    height: 40px;
-    background-color: rgba(45, 95, 170,1.0);
-    border-style: hidden;
-    border-radius: 50%;
-    z-index: 2;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    width: 124px;
+    z-index: 3;
 }
 
+/* Timeline Card */
 .Left, .Right{
     position: relative;
-    top: 0;
-    width: 43%;
-    height: 100px;
+    box-sizing: border-box;
+    width: 45%;
+    height: inherit;
+    padding: -5px 0 0 0;
     z-index: 3;
     overflow: hidden;
-    
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(139, 141, 160);
 }
 
 .Left {
     float: left;
-    background-color: green;
+    border-right: solid;
+    border-width: 30px;
+    border-color: rgb(0, 45, 112); 
 }
 
 .Right {
     float: right;
-    background-color: purple;
+    border-left: solid;
+    border-width: 30px;
+    border-color: rgb(0, 45, 112); 
 }
 
-/*
-.Left:hover, .Right:hover {
-    transform: scale(1.15);
-    height: 300px;
-}
-*/
-
-.Left h1, .Right h1, .Left h2, .Right h2 {
-    font-size: small;
+.Left h1, .Right h1 {
+    font-size: large;
     text-align: left;
     padding: 0 0 0 20px;
+    line-height: 75%;
 }
 
-.Left h1, .Right h1, .Left h2, .Right h2 {
+.Left h2, .Right h2{
     font-size: small;
     text-align: left;
+    font-style: italic;
+    font-weight: normal;
+    padding: 0 0 0 20px;
+    line-height: 25%;;
+}
+
+.Left img, .Right img {
+    width: 100px;
+    height: 100px;
 }
 
 .OnTop {
