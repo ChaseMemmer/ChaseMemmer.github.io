@@ -10,7 +10,8 @@ body {
 
 #particles-js
 {
-    height:300%;
+    height: 8500px;
+    width: 100%;
     background: #262626;
 }
 
@@ -36,7 +37,7 @@ Profile Box
 .ProfileOutline{
     position: absolute;
     width: 800px;
-    height: 600px;
+    height: 600px;          /* This line influences where the hard bottom line is */
     top: calc(40% - 250px);
     left: calc(50% - 400px);
     border-radius: 25px;
@@ -44,10 +45,10 @@ Profile Box
     z-index: 0;
 }
 
-.ProfileOutline:after{
-    content: '';
-    width: 850px;
-    height: 475px;
+.ProfileOutline:after{      /* Remove this at some point */
+    content: '';            /* Will have to make another container tho */
+    width: 850px;           
+    height: 475px;          /* This line influences where the fade is */
     position: absolute;
     left: -25px;
     right: -25px;
@@ -113,7 +114,7 @@ Profile Box
     left: 50%;
     text-align: left;
     line-height: 90%;
-    color: #333;
+    color: #000;
 }
 
 .colorful:hover {
@@ -188,12 +189,12 @@ button {
     max-width: 80%;
 	transform: translate(-50%, 0);
 	border-radius: 25px;
-    font-size: 110%;
+    font-size: 90%;
 }
 div ul {
 	list-style: none;
 	padding: 0 20px 1px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgb(163, 163, 163);
 	border-radius: 5px;
 }
 div ul li {
@@ -267,7 +268,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     float: left;
     position: relative;
     margin: 0 0 20px 10px;
-    background-color: #555;
+    background-color: rgb(146, 146, 146);
     border-radius: 25px;
     border-style: solid;
     border-color: #262626;
@@ -407,7 +408,11 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     z-index: 3;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
-    background-color: rgb(139, 141, 160);
+    background-color: rgb(139, 144, 160);
+}
+
+.Thin {
+    height: 60px;
 }
 
 .Left {
@@ -424,15 +429,11 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     border-color: rgb(0, 45, 112); 
 }
 
-.Highlight {
-    background-color: rgb(88, 113, 150); 
-}
-
 .Left h1, .Right h1 {
     font-size: large;
     text-align: left;
-    padding: 0 0 0 20px;
-    line-height: 75%;
+    padding: 0 0 0 15px;
+    line-height: 50%;
 }
 
 .Left h2, .Right h2{
@@ -440,13 +441,19 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     text-align: left;
     font-style: italic;
     font-weight: normal;
-    padding: 0 0 0 20px;
-    line-height: 25%;;
+    padding: 0 0 0 15px;
+    line-height: 45%;;
+}
+
+.Left p, .Right p {
+    text-align:justify;
+    width: 550px;
+    margin: 0 0 0 8%;
 }
 
 .Left img, .Right img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 .OnTop {
@@ -463,6 +470,15 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     position: relative;
     display: inline-block;
     transform: translate(0%, 25%);
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+
+.Thin .OnTop img {
+    position: relative;
+    display: inline-block;
+    transform: translate(0%, 10%);
     width: 50px;
     height: 50px;
     z-index: 1;
