@@ -2,11 +2,11 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-attachment: fixed;
     min-height: 200vh;
+    min-width: 900px;
 }
 
 #particles-js
@@ -36,10 +36,10 @@ nav ul {
 Profile Box
 ========================================= */
 .ProfileOutline{
-    position: absolute;
+    position: relative;
     width: 800px;
     height: 600px;          /* This line influences where the hard bottom line is */
-    top: calc(40% - 250px);
+    top: 0;
     left: calc(50% - 400px);
     border-radius: 25px;
     overflow: hidden;
@@ -159,10 +159,11 @@ button {
 #InfoContainer {
     border-color: #fff;
     position: absolute;
-    top: 80%;
+    top: 10%;
     left: calc(50% - 400px);   /* 400 = 800/2 */
     width: 800px;
     height: auto;
+    padding: 0 50px 0 50px;
 }
 
 /* =========================================
@@ -225,10 +226,12 @@ ul li .arrow:after {
 ul li input[type=checkbox] {
 	position: absolute;
 	cursor: pointer;
-	width: 100%;
+	width: 100px;
 	height: 100%;
+    right: -20px;
     z-index: 1;    
     opacity: 0;
+
 }
 ul li input[type=checkbox]:checked ~ p {
 	margin-top: 0;
@@ -308,6 +311,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     background-color: rgba(255,255,255,0.3);
     padding: 10px 50px 25px;
     overflow-y: visible;
+    overflow-x: hidden;
     border-radius: 25px;
 }
 /* Header */
@@ -452,6 +456,9 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     margin: 0 0 0 8%;
 }
 
+.img_container {
+    white-space: nowrap;
+}
 .Left img, .Right img {
     width: 200px;
     height: 200px;

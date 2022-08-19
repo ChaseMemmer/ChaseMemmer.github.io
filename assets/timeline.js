@@ -18,6 +18,20 @@ for (var i = 0; i < TimelineElementsLeft.length; i++) {
                 event.currentTarget.style.height = "inherit";
             }
         } else {
+            if(document.getElementById("large") != null) {
+            var temp = document.getElementById("large");
+                temp.removeAttribute('id');
+                temp.zIndex = "3";
+                event.currentTarget.overflow = "hidden"
+                temp.style.width = "45%";
+                temp.style.paddingBottom = "0px"
+                temp.firstElementChild.style.display = "inherit";
+                if(temp.classList.contains("Thin")) {
+                    temp.style.height = "60px";
+                } else {
+                    temp.style.height = "inherit";
+                }
+            }
             event.currentTarget.setAttribute("id","large");
             event.currentTarget.zIndex = "10";
             event.currentTarget.overflow = "visible"
@@ -44,6 +58,20 @@ for (var i = 0; i < TimelineElementsRight.length; i++) {
                 event.currentTarget.style.height = "inherit";
             }
         } else {
+            if(document.getElementById("large") != null) {
+            var temp = document.getElementById("large");
+                temp.removeAttribute('id');
+                temp.zIndex = "3";
+                event.currentTarget.overflow = "hidden"
+                temp.style.width = "45%";
+                temp.style.paddingBottom = "0px"
+                temp.firstElementChild.style.display = "inherit";
+                if(temp.classList.contains("Thin")) {
+                    temp.style.height = "60px";
+                } else {
+                    temp.style.height = "inherit";
+                }
+            }
             event.currentTarget.setAttribute("id","large");
             event.currentTarget.zIndex = "10";
             event.currentTarget.overflow = "visible"
