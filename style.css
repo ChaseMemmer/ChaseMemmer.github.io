@@ -162,7 +162,6 @@ button {
     left: calc(50% - 400px);   /* 400 = 800/2 */
     width: 800px;
     height: auto;
-    padding: 0 50px 0 50px;
 }
 
 /* =========================================
