@@ -7,8 +7,8 @@ for (var i = 0; i < TimelineElementsLeft.length; i++) {
     TimelineElementsLeft[i].addEventListener('click', function(event) {
         if(event.currentTarget.id == "large") {
             event.currentTarget.removeAttribute('id');
-            event.currentTarget.zIndex = "3";
-            event.currentTarget.overflow = "hidden"
+            event.currentTarget.style.zIndex = "3";
+            event.currentTarget.style.overflow = "hidden";
             event.currentTarget.style.width = "45%";
             event.currentTarget.style.paddingBottom = "0px"
             event.currentTarget.firstElementChild.style.display = "inherit";
@@ -21,8 +21,8 @@ for (var i = 0; i < TimelineElementsLeft.length; i++) {
             if(document.getElementById("large") != null) {
             var temp = document.getElementById("large");
                 temp.removeAttribute('id');
-                temp.zIndex = "3";
-                event.currentTarget.overflow = "hidden"
+                temp.style.zIndex = "3";
+                temp.style.overflow = "hidden";
                 temp.style.width = "45%";
                 temp.style.paddingBottom = "0px"
                 temp.firstElementChild.style.display = "inherit";
@@ -33,8 +33,8 @@ for (var i = 0; i < TimelineElementsLeft.length; i++) {
                 }
             }
             event.currentTarget.setAttribute("id","large");
-            event.currentTarget.zIndex = "10";
-            event.currentTarget.overflow = "visible"
+            event.currentTarget.style.zIndex = "10";
+            event.currentTarget.style.overflow = "visible";
             event.currentTarget.style.height = "auto";
             event.currentTarget.style.width = "100%";
             event.currentTarget.style.paddingBottom = "25px"
@@ -47,8 +47,8 @@ for (var i = 0; i < TimelineElementsRight.length; i++) {
     TimelineElementsRight[i].addEventListener('click', function(event) {
         if(event.currentTarget.id == "large") {
             event.currentTarget.removeAttribute('id');
-            event.currentTarget.zIndex = "3";
-            event.currentTarget.overflow = "hidden"
+            event.currentTarget.style.zIndex = "3";
+            event.currentTarget.style.overflow = "hidden";
             event.currentTarget.style.width = "45%";
             event.currentTarget.style.paddingBottom = "0px"
             event.currentTarget.firstElementChild.style.display = "inherit";
@@ -61,8 +61,8 @@ for (var i = 0; i < TimelineElementsRight.length; i++) {
             if(document.getElementById("large") != null) {
             var temp = document.getElementById("large");
                 temp.removeAttribute('id');
-                temp.zIndex = "3";
-                event.currentTarget.overflow = "hidden"
+                temp.style.zIndex = "3";
+                temp.style.overflow = "hidden";
                 temp.style.width = "45%";
                 temp.style.paddingBottom = "0px"
                 temp.firstElementChild.style.display = "inherit";
@@ -73,8 +73,8 @@ for (var i = 0; i < TimelineElementsRight.length; i++) {
                 }
             }
             event.currentTarget.setAttribute("id","large");
-            event.currentTarget.zIndex = "10";
-            event.currentTarget.overflow = "visible"
+            event.currentTarget.style.zIndex = "10";
+            event.currentTarget.style.overflow = "visible";
             event.currentTarget.style.height = "auto";
             event.currentTarget.style.width = "100%";
             event.currentTarget.style.paddingBottom = "25px"
@@ -82,13 +82,3 @@ for (var i = 0; i < TimelineElementsRight.length; i++) {
         }
     });
 }
-
-
-/*
-function changeSize() {
-    var el = document.getElementById("test");
-    el.style.height = "200px";
-    el.style.width = "200px";
-}
-
-*/
