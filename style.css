@@ -63,7 +63,6 @@ Profile Box
     border-radius: 25px;
     overflow: hidden;
     z-index: 0;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
 }
 
 .ProfileOutline:after{      /* Remove this at some point */
@@ -88,10 +87,9 @@ Profile Box
     width: 275px;
     height: 350px;
     z-index: 1;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 .PicContainer img {
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #ProfilePic {
@@ -102,7 +100,7 @@ Profile Box
 }
 
 #ProfilePic:hover{
-    transform: scale(1.08);
+    transform: scale(1.154);
 }
 
 #HelloPic{
@@ -192,7 +190,7 @@ button {
 .AboutMeOutline{
     position: relative;
     z-index: 0;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.15);
     padding-top: 10px;
     padding-bottom: 20px;
     border-radius: 25px;
@@ -294,7 +292,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     margin-top: 10%;
     border-radius: 25px;
     z-index: 0;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.15);
     padding: 10px 50px 0px;
     overflow-y: visible;
 }
@@ -357,7 +355,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     position: relative;
     margin-top: 10%;
     z-index: 0;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.15);
     padding: 10px 50px 25px;
     overflow-y: visible;
     overflow-x: hidden;
