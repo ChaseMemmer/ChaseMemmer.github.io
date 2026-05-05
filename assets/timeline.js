@@ -1,94 +1,94 @@
-var TimelineElements = document.querySelectorAll('.Left, .Right');
+//Get timeline elements
+var TimelineElementsLeft = document.querySelectorAll('.Left');
+var TimelineElementsRight = document.querySelectorAll('.Right');
 
-function getCollapsedHeight(el) {
-    return el.classList.contains('Thin') ? 55 : 75;
-}
-
-function collapseCard(el) {
-    el.style.height = el.offsetHeight + 'px';
-    el.removeAttribute('id');
-    el.offsetHeight; // force reflow
-
-    // Reset any content styles applied during expand
-    var contentEls = el.querySelectorAll('p, img, .img_container');
-    for (var i = 0; i < contentEls.length; i++) {
-        contentEls[i].style.opacity = '';
-        contentEls[i].style.transition = '';
-    }
-
-    el.style.overflow = 'hidden';
-    el.style.zIndex = '3';
-    el.style.transition = 'width 0.5s ease-in-out, height 0.5s ease-in-out';
-    el.style.width = '45%';
-    el.style.height = getCollapsedHeight(el) + 'px';
-    el.style.paddingBottom = '0px';
-    el.firstElementChild.style.display = '';
-
-    el.addEventListener('transitionend', function cleanup(e) {
-        if (e.propertyName === 'width') {
-            el.style.height = '';
-            el.style.transition = '';
-            el.removeEventListener('transitionend', cleanup);
-        }
-    });
-}
-
-function expandCard(el) {
-    // Measure the card's final height at full width before animating.
-    // id="large" is already set by the caller so CSS shows the paragraph text,
-    // ensuring the measurement includes the full content height.
-    el.style.transition = 'none';
-    el.style.overflow = 'hidden';
-    el.style.width = '100%';
-    el.style.height = 'auto';
-    el.style.paddingBottom = '25px';
-    el.firstElementChild.style.display = 'none';
-    var finalHeight = el.offsetHeight; // force reflow + capture
-
-    // Keep text and images invisible during width animation to prevent reflow jerk
-    var contentEls = el.querySelectorAll('p, img, .img_container');
-    for (var i = 0; i < contentEls.length; i++) {
-        contentEls[i].style.transition = 'none';
-        contentEls[i].style.opacity = '0';
-    }
-
-    // Reset to collapsed width with height already at its final value
-    el.style.height = finalHeight + 'px';
-    el.style.width = '45%';
-    el.offsetHeight; // force reflow
-
-    // Animate width only — height stays fixed so the card expands as a solid block
-    el.style.zIndex = '10';
-    el.style.transition = 'width 0.5s ease-in-out';
-    el.style.width = '100%';
-
-    el.addEventListener('transitionend', function cleanup(e) {
-        if (e.propertyName === 'width') {
-            el.style.height = 'auto';
-            el.style.overflow = 'visible';
-            el.style.transition = '';
-            el.removeEventListener('transitionend', cleanup);
-            // Fade in all content after the card has fully expanded
-            for (var j = 0; j < contentEls.length; j++) {
-                contentEls[j].style.transition = 'opacity 0.4s ease';
-                contentEls[j].style.opacity = '1';
+//Listen for clicks
+for (var i = 0; i < TimelineElementsLeft.length; i++) {
+    TimelineElementsLeft[i].addEventListener('click', function(event) {
+        if(event.currentTarget.id == "large") {
+            event.currentTarget.removeAttribute('id');
+            event.currentTarget.zIndex = "3";
+            event.currentTarget.overflow = "hidden"
+            event.currentTarget.style.width = "45%";
+            event.currentTarget.style.paddingBottom = "0px"
+            event.currentTarget.firstElementChild.style.display = "inherit";
+            if(event.currentTarget.classList.contains("Thin")) {
+                event.currentTarget.style.height = "60px";
+            } else {
+                event.currentTarget.style.height = "inherit";
             }
-        }
-    });
-}
-
-for (var i = 0; i < TimelineElements.length; i++) {
-    TimelineElements[i].addEventListener('click', function(event) {
-        var el = event.currentTarget;
-        if (el.id === 'large') {
-            collapseCard(el);
         } else {
-            var current = document.getElementById('large');
-            if (current !== null) {
-                collapseCard(current);
+            if(document.getElementById("large") != null) {
+            var temp = document.getElementById("large");
+                temp.removeAttribute('id');
+                temp.zIndex = "3";
+                event.currentTarget.overflow = "hidden"
+                temp.style.width = "45%";
+                temp.style.paddingBottom = "0px"
+                temp.firstElementChild.style.display = "inherit";
+                if(temp.classList.contains("Thin")) {
+                    temp.style.height = "60px";
+                } else {
+                    temp.style.height = "inherit";
+                }
             }
-            el.setAttribute('id', 'large');
-            expandCard(el);
+            event.currentTarget.setAttribute("id","large");
+            event.currentTarget.zIndex = "10";
+            event.currentTarget.overflow = "visible"
+            event.currentTarget.style.height = "auto";
+            event.currentTarget.style.width = "100%";
+            event.currentTarget.style.paddingBottom = "25px"
+            event.currentTarget.firstElementChild.style.display = "none";
         }
     });
 }
+
+for (var i = 0; i < TimelineElementsRight.length; i++) {
+    TimelineElementsRight[i].addEventListener('click', function(event) {
+        if(event.currentTarget.id == "large") {
+            event.currentTarget.removeAttribute('id');
+            event.currentTarget.zIndex = "3";
+            event.currentTarget.overflow = "hidden"
+            event.currentTarget.style.width = "45%";
+            event.currentTarget.style.paddingBottom = "0px"
+            event.currentTarget.firstElementChild.style.display = "inherit";
+            if(event.currentTarget.classList.contains("Thin")) {
+                event.currentTarget.style.height = "60px";
+            } else {
+                event.currentTarget.style.height = "inherit";
+            }
+        } else {
+            if(document.getElementById("large") != null) {
+            var temp = document.getElementById("large");
+                temp.removeAttribute('id');
+                temp.zIndex = "3";
+                event.currentTarget.overflow = "hidden"
+                temp.style.width = "45%";
+                temp.style.paddingBottom = "0px"
+                temp.firstElementChild.style.display = "inherit";
+                if(temp.classList.contains("Thin")) {
+                    temp.style.height = "60px";
+                } else {
+                    temp.style.height = "inherit";
+                }
+            }
+            event.currentTarget.setAttribute("id","large");
+            event.currentTarget.zIndex = "10";
+            event.currentTarget.overflow = "visible"
+            event.currentTarget.style.height = "auto";
+            event.currentTarget.style.width = "100%";
+            event.currentTarget.style.paddingBottom = "25px"
+            event.currentTarget.firstElementChild.style.display = "none";
+        }
+    });
+}
+
+
+/*
+function changeSize() {
+    var el = document.getElementById("test");
+    el.style.height = "200px";
+    el.style.width = "200px";
+}
+
+*/

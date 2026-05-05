@@ -11,7 +11,7 @@ var mouseObj = {
     var dot, eventDoc, doc, body, pageX, pageY;
     
     event = event || window.event; // IE-ism
-    var target = event.currentTarget;
+    target = event.currentTarget;
     // (old IE)
     if (event.pageX == null && event.clientX != null) {
       eventDoc = (event.target && event.target.ownerDocument) || document;
