@@ -212,12 +212,11 @@ button {
 }
 
 .section-accent {
-    display: block;
-    width: 44px;
-    height: 3px;
-    background: rgb(45, 95, 170);
-    margin: 4px auto 10px;
-    border-radius: 2px;
+    display: none;
+}
+
+hr {
+    border-color: transparent !important;
 }
 
 .AboutMeOutline p, .AboutMeOutline span {
@@ -236,9 +235,9 @@ button {
 .accordion-menu ul {
 	list-style: none;
 	padding: 0 20px 1px;
-    background-color: rgb(163, 163, 163, 0.4);
+    background-color: rgb(163, 163, 163);
 	border-radius: 5px;
-    margin: 0;
+    margin: 0 0 8px 0;
 }
 .accordion-menu ul li {
 	position: relative;
