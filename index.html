@@ -9,6 +9,8 @@ Add comments
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=900px, initial-scale=0.5">
     <title>Chase Memmer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="NavigationBar.css">
 </head>
@@ -19,6 +21,7 @@ Add comments
         <ul>
             <li><a href="../ChaseMemmer.github.io/">Home</a></li>
             <li><a href="/Resume">Resume</a></li>
+            <li><a href="/Whitepaper">Prosthetics White Paper</a></li>
         </ul>
     </nav>
 
@@ -57,21 +60,22 @@ Add comments
                 <p class="colorful"> Yes </p>
             </div>
         </div>
-        <button class="button" id="button1" onclick="javascript:location.href='../Resume.html';">View my Resume</button>
+        <button class="button" id="button1" onclick="location.href='/Resume';">View my Resume</button>
         <script type="text/javascript" src="/assets/button.js"></script>
     </div>
 
     <!-- About Me -->
-    <div class="AboutMeOutline">
-        <h1 style="line-height: 10px;">About Me</h1>
+    <div class="AboutMeOutline fade-in">
+        <h1>About Me</h1>
+        <span class="section-accent"></span>
         <img src="/assets/Icons/ScrollOrnament.svg" height="20px">
-        <p></p>
+        <br>
         <span class="colorful"><em>Imaginative. </em></span>
         <span class="colorful"><em>Knowledgeable.</em></span>
         <span class="colorful"><em>Driven.</em></span>
-        <p style="width: 80%; margin-left: 10%;">A multi-disiplinary professional who can handle all 
-            aspects of hardware and related software. Highly motivated to leave a lasting mark on the 
-            industry. 
+        <p>A multidisciplinary professional who can handle all
+            aspects of hardware and related software. Highly motivated to leave a lasting mark on the
+            industry.
         </p>
 
         <div class="accordion-menu">
@@ -93,10 +97,9 @@ Add comments
                     <i class="arrow"></i>
                     <h2>Why Robotics?</h2>
                     <p>I earned my first professional engineering job at fifteen years old and have been narrowing
-                       my focus ever since. Robotics has consistently excited me and I have 
+                       my focus ever since. Robotics has consistently excited me and I have
                        the innate skills to excel at it. Also, the cutting-edge nature of prosthetics and exoskeletons
-                       has capitivated my attention and I sincerly desire to help the technology flourish.
-
+                       has captivated my attention and I sincerely desire to help the technology flourish.
                     </p>
                 </li>
             </ul>
@@ -118,114 +121,116 @@ Add comments
     </div>
 
     <!-- Skills -->
-    <div class="SkillsOutline">
-        <h1 style="line-height: 10px;">Software Skills</h1>
+    <div class="SkillsOutline fade-in">
+        <h1>Technical Skills</h1>
+        <span class="section-accent"></span>
         <img src="/assets/Icons/ScrollOrnament.svg" height="20px">
 
-        <!--
-            Format is:
-            <div class="skill"></div> as the container
-
-            <img> for logos (found in /assets/Icons)
-            <span> for title
-        -->
-
-        <p class="colorful">I am confident using:</p> 
-            <div class="skill"> 
+        <p class="colorful">Confident using:</p>
+        <div class="skills-group">
+            <div class="skill">
                 <img src="/assets/Icons/Solidworks.png">
                 <span>SolidWorks</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/Matlab.png">
                 <span>MATLAB</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/LTSpice.png">
                 <span>LTSpice/Cadence</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/Kicad.png">
                 <span>KiCAD</span>
             </div>
-            <hr style="width:88%; border-color: #444; border-width: 1px;">
+        </div>
+        <hr style="width:88%; border-color: #aaa; border-width: 1px;">
 
-        <p class="colorful">I have used in past projects:</p> 
-            <div class="skill"> 
+        <p class="colorful">Used in past projects:</p>
+        <div class="skills-group">
+            <div class="skill">
                 <img src="/assets/Icons/LabView.jpg">
-                <span>Labview</span>
+                <span>LabVIEW</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/AutoCad.png">
                 <span>AutoCAD</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/CoppeliaSim.png">
                 <span>CoppeliaSim</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/ProgrammingC.png">
                 <span>C</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/Excel.png">
                 <span>Excel VBA</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/Arduino.png">
                 <span>Arduino</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/Python.png">
                 <span>Python</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/html.png">
                 <span>HTML</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/css.png">
                 <span>CSS</span>
             </div>
-            <hr style="width:88%; border-color: #444; border-width: 1px;">
+        </div>
+        <hr style="width:88%; border-color: #aaa; border-width: 1px;">
 
-        <p class="colorful">I am currently learning more about:</p> 
-            <div class="skill"> 
+        <p class="colorful">Currently expanding knowledge in:</p>
+        <div class="skills-group">
+            <div class="skill">
                 <img src="/assets/Icons/RobotHead.png">
                 <span>Machine Learning</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/ProgrammingC.png">
                 <span>C</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/Python.png">
                 <span>Python</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/CoppeliaSim.png">
                 <span>CoppeliaSim</span>
             </div>
-            <hr style="width:88%; border-color: #444; border-width: 1px;">
+        </div>
+        <hr style="width:88%; border-color: #aaa; border-width: 1px;">
 
-        <p class="colorful">I have certifications in:</p> 
-        <div class="skill"> 
+        <p class="colorful">Certified in:</p>
+        <div class="skills-group">
+            <div class="skill">
                 <img src="/assets/Icons/Solidworks.png">
                 <span>SolidWorks</span>
             </div>
-            <div class="skill"> 
+            <div class="skill">
                 <img src="/assets/Icons/Matlab.png">
                 <span>MATLAB</span>
             </div>
-            <hr style="width:88%; border-color: #666; border-width: 1px;">
+        </div>
+        <hr style="width:88%; border-color: #aaa; border-width: 1px; margin-bottom: 4px;">
     </div>
     
 
     <!-- Timeline -->
-    
-    <div class="Timeline">
-        <h1 style="line-height: 10px;">Timeline</h1>
+
+    <div class="Timeline fade-in">
+        <h1>Timeline</h1>
+        <span class="section-accent"></span>
         <img src="/assets/Icons/ScrollOrnament.svg" height="20px">
-        <p style="line-height: 0%; margin-bottom: 35px;"><em>(Click on an event to see more info)</em></p>
+        <p style="margin-bottom: 30px; color: #374151; font-size: 0.88rem;"><em>(Click an event to expand)</em></p>
         <div class="TimelineHeader">
             <span style="float: left; margin-left: 80px;">Technical Projects</span>
             <span style="float: right; margin-right: 35px;">Non-Technical Enterprises</span>
@@ -274,7 +279,7 @@ Add comments
                 <p>Many of the past projects have been aimed at developing a specific sub-skill, so
                     my goal with this project is to start to combine skills into a whole product.
                     That being said, the first phase will still focus on developing my coding abilities.
-                    Once finished1, the project has direct and easily detailed extensions (aka, more degrees of 
+                    Once finished, the project has direct and easily detailed extensions (aka, more degrees of 
                     freedom, more "human-like" aesthetic) which I hope to pursue, even while working. 
                     </p><br><p>
                     In essence, I am researching and attempting to design both the hardware and 
@@ -356,7 +361,7 @@ Add comments
             <img class="marker" src="/assets/Icons/TimelineOrnament.svg">
             <div class="Right">
                 <div class="OnTop"></div>
-                <h1>Hiking the Appalacian Trail</h1>
+                <h1>Hiking the Appalachian Trail</h1>
                 <h2>May 2022 - July 2022</h2>
                 <h2>900 miles without breaks</h2>
                 <p>I thoroughly enjoy the outdoors, so I thought it would be exciting
@@ -485,9 +490,9 @@ Add comments
                 <h1>Co-op at Quincy Compressor</h1>
                 <h2>May 2019 - May 2020</h2>
                 <h2>Assistant to Senior Manager of the R&D Dept.</h2>
-                <p>Quincy Compressor holds ~25% market share of compressor sales in the USA. Between 25% and 35% of 
-                    all electricity generated in industrialized contries goes into compressing air, so R&D for 
-                    these specific devices is essential for both economical and enviornmental reasons. 
+                <p>Quincy Compressor holds ~25% market share of compressor sales in the USA. Between 25% and 35% of
+                    all electricity generated in industrialized countries goes into compressing air, so R&D for
+                    these specific devices is essential for both economic and environmental reasons.
                     </p><br><p>
                     As an engineering intern in the R&D department, I was tasked with helping 
                     maintain the lab. My primary jobs included data collection/analysis of every 
@@ -495,7 +500,7 @@ Add comments
                     lab procedures for new ASME, ISO and third-party standards, as well as OSHA requirements. 
                     I also had several projects which included designing a new testing rig, modifying 
                     compressor parts for R&D and sourcing/overseeing contractors on lab improvement projects. 
-                    The largest responsibility I had was a $15.000 project aimed towards replacing extremely sensitive 
+                    The largest responsibility I had was a $15,000 project aimed towards replacing extremely sensitive
                     flow sensors. I worked well enough to earn a standing offer of employment, for after graduation, from the 
                     Senior Manager for the R&D lab (my direct supervisor).
                 </p>
@@ -579,7 +584,7 @@ Add comments
                     robot on the surface of 'virtual reality Mars' would be perfect. Furthermore, it could 
                     double as a way for the Software team to improve their localization program since they 
                     could make arbitrary obstacles. Altogether, I spent about two months porting a simplified 
-                    robot from Solidworks to CopelliaSim (a ROS program) and getting it to move and interact with 
+                    robot from Solidworks to CoppeliaSim (a ROS program) and getting it to move and interact with 
                     the environment. Unfortunately, the project was scrapped because of issues visualizing it 
                     in a VR headset. 
                 </p>
@@ -687,6 +692,7 @@ Add comments
     </section>
 
 <script type="text/javascript" src="/assets/timeline.js"></script>
+<script type="text/javascript" src="/assets/scroll-anim.js"></script>
 
 </body>
 </html>
