@@ -1,94 +1,55 @@
-//Get timeline elements
-var TimelineElementsLeft = document.querySelectorAll('.Left');
-var TimelineElementsRight = document.querySelectorAll('.Right');
+var allCards = document.querySelectorAll('.Left, .Right');
 
-//Listen for clicks
-for (var i = 0; i < TimelineElementsLeft.length; i++) {
-    TimelineElementsLeft[i].addEventListener('click', function(event) {
-        if(event.currentTarget.id == "large") {
-            event.currentTarget.removeAttribute('id');
-            event.currentTarget.zIndex = "3";
-            event.currentTarget.overflow = "hidden"
-            event.currentTarget.style.width = "45%";
-            event.currentTarget.style.paddingBottom = "0px"
-            event.currentTarget.firstElementChild.style.display = "inherit";
-            if(event.currentTarget.classList.contains("Thin")) {
-                event.currentTarget.style.height = "60px";
-            } else {
-                event.currentTarget.style.height = "inherit";
-            }
-        } else {
-            if(document.getElementById("large") != null) {
-            var temp = document.getElementById("large");
-                temp.removeAttribute('id');
-                temp.zIndex = "3";
-                event.currentTarget.overflow = "hidden"
-                temp.style.width = "45%";
-                temp.style.paddingBottom = "0px"
-                temp.firstElementChild.style.display = "inherit";
-                if(temp.classList.contains("Thin")) {
-                    temp.style.height = "60px";
-                } else {
-                    temp.style.height = "inherit";
-                }
-            }
-            event.currentTarget.setAttribute("id","large");
-            event.currentTarget.zIndex = "10";
-            event.currentTarget.overflow = "visible"
-            event.currentTarget.style.height = "auto";
-            event.currentTarget.style.width = "100%";
-            event.currentTarget.style.paddingBottom = "25px"
-            event.currentTarget.firstElementChild.style.display = "none";
+function getCollapsedHeight(el) {
+    return el.classList.contains("Thin") ? 55 : 75;
+}
+
+function collapse(el) {
+    // Pin current height as explicit px so CSS transition has a known start value
+    el.style.height = el.offsetHeight + "px";
+    el.getBoundingClientRect(); // force reflow
+
+    el.removeAttribute('id');
+    el.style.zIndex = "3";
+    el.style.width = "45%";
+    el.style.paddingBottom = "0px";
+    el.style.height = getCollapsedHeight(el) + "px";
+
+    // Restore OnTop icon once the height transition finishes
+    var onTop = el.firstElementChild;
+    el.addEventListener('transitionend', function handler(e) {
+        if (e.propertyName === 'height') {
+            onTop.style.display = "";
+            el.removeEventListener('transitionend', handler);
         }
     });
 }
 
-for (var i = 0; i < TimelineElementsRight.length; i++) {
-    TimelineElementsRight[i].addEventListener('click', function(event) {
-        if(event.currentTarget.id == "large") {
-            event.currentTarget.removeAttribute('id');
-            event.currentTarget.zIndex = "3";
-            event.currentTarget.overflow = "hidden"
-            event.currentTarget.style.width = "45%";
-            event.currentTarget.style.paddingBottom = "0px"
-            event.currentTarget.firstElementChild.style.display = "inherit";
-            if(event.currentTarget.classList.contains("Thin")) {
-                event.currentTarget.style.height = "60px";
-            } else {
-                event.currentTarget.style.height = "inherit";
-            }
+function expand(el) {
+    // Pin current height so transition starts from a known px value
+    el.style.height = el.offsetHeight + "px";
+
+    el.firstElementChild.style.display = "none";
+    el.setAttribute("id", "large");
+    el.style.zIndex = "10";
+    el.style.width = "100%";
+    el.style.paddingBottom = "25px";
+
+    // Force reflow with new width applied so scrollHeight is accurate
+    el.getBoundingClientRect();
+    el.style.height = el.scrollHeight + "px";
+}
+
+allCards.forEach(function (card) {
+    card.addEventListener('click', function (event) {
+        var el = event.currentTarget;
+        var prev = document.getElementById("large");
+
+        if (el.id === "large") {
+            collapse(el);
         } else {
-            if(document.getElementById("large") != null) {
-            var temp = document.getElementById("large");
-                temp.removeAttribute('id');
-                temp.zIndex = "3";
-                event.currentTarget.overflow = "hidden"
-                temp.style.width = "45%";
-                temp.style.paddingBottom = "0px"
-                temp.firstElementChild.style.display = "inherit";
-                if(temp.classList.contains("Thin")) {
-                    temp.style.height = "60px";
-                } else {
-                    temp.style.height = "inherit";
-                }
-            }
-            event.currentTarget.setAttribute("id","large");
-            event.currentTarget.zIndex = "10";
-            event.currentTarget.overflow = "visible"
-            event.currentTarget.style.height = "auto";
-            event.currentTarget.style.width = "100%";
-            event.currentTarget.style.paddingBottom = "25px"
-            event.currentTarget.firstElementChild.style.display = "none";
+            if (prev) collapse(prev);
+            expand(el);
         }
     });
-}
-
-
-/*
-function changeSize() {
-    var el = document.getElementById("test");
-    el.style.height = "200px";
-    el.style.width = "200px";
-}
-
-*/
+});
