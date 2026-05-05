@@ -35,6 +35,7 @@ function expand(el) {
     el.style.transition = "none";
     el.firstElementChild.style.display = "none";
     el.setAttribute("id", "large");
+    el.classList.add("expanding"); // keep content invisible during animation
     el.style.zIndex = "10";
     el.style.width = "100%";
     el.style.paddingBottom = "25px";
@@ -52,6 +53,14 @@ function expand(el) {
     el.style.width = "100%";
     el.style.paddingBottom = "25px";
     el.style.height = targetH + "px";
+
+    // Reveal content once the box has finished expanding
+    el.addEventListener('transitionend', function handler(e) {
+        if (e.propertyName === 'height') {
+            el.classList.remove("expanding");
+            el.removeEventListener('transitionend', handler);
+        }
+    });
 }
 
 allCards.forEach(function (card) {

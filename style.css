@@ -277,14 +277,16 @@ ul li input[type=checkbox] {
 ul li input[type=checkbox]:checked ~ p {
 	margin-top: 0;
 	max-height: 0;
-	opacity: 0;
-	transform: translate(0, 50%);
 }
 ul li input[type=checkbox]:checked ~ .arrow:before {
 	transform: translate(5px, 0) rotate(45deg);
 }
 ul li input[type=checkbox]:checked ~ .arrow:after {
 	transform: translate(-5px, 0) rotate(-45deg);
+}
+.accordion-menu p {
+    overflow: hidden;
+    max-height: 1000px;
 }
 .accordion-menu p, ul li .arrow:before, ul li .arrow:after {
     transition: all 0.5s ease-out;
@@ -520,10 +522,24 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     margin: 0 5% 0 8%;
 }
 
-/* Hide paragraph content in collapsed cards; revealed when id="large" is set */
+/* Hide content in collapsed cards; revealed when id="large" is set */
 .Left:not([id="large"]) p,
-.Right:not([id="large"]) p {
+.Right:not([id="large"]) p,
+.Left:not([id="large"]) > img,
+.Right:not([id="large"]) > img,
+.Left:not([id="large"]) > .img_container,
+.Right:not([id="large"]) > .img_container {
     display: none;
+}
+
+/* Hide content visually during expand animation so it doesn't appear jerky */
+.Left.expanding p,
+.Right.expanding p,
+.Left.expanding > img,
+.Right.expanding > img,
+.Left.expanding > .img_container,
+.Right.expanding > .img_container {
+    visibility: hidden;
 }
 
 .img_container {
