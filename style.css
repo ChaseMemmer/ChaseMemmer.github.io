@@ -1,34 +1,54 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-attachment: fixed;
+    background-color: #262626;
     min-width: 1000px;
 }
 
-#particles-js
-{
-    height: 4750px;
+/* =========================================
+# Scroll Entrance Animation
+========================================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
     background: #262626;
+    z-index: -1;
 }
 
 /* =========================================
 # Navigation Bar
 ========================================= */
 nav {
-    position: absolute;
+    position: fixed;
+    top: 0;
     height: 8%;
     width: 97%;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
+    z-index: 100;
+    background-color: rgba(38, 38, 38, 0.85);
 }
 nav ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* ======================================
@@ -47,12 +67,12 @@ Profile Box
 
 .ProfileOutline:after{      /* Remove this at some point */
     content: '';            /* Will have to make another container tho */
-    width: 850px;           
+    width: 850px;
     height: 475px;          /* This line influences where the fade is */
     position: absolute;
     left: -25px;
     right: -25px;
-    top: -25px;  
+    top: -25px;
     bottom: 0;
     box-shadow: inset 0 0 0 300px rgba(255,255,255,0.4);
     filter: blur(30px);
@@ -84,11 +104,11 @@ Profile Box
 }
 
 #HelloPic{
-    position:absolute; 
-    left: 300px; 
-    top: 55px; 
-    height: 210px; 
-    width: 200px; 
+    position:absolute;
+    left: 300px;
+    top: 55px;
+    height: 210px;
+    width: 200px;
     z-index: 1;
 }
 
@@ -156,10 +176,8 @@ button {
 ========================================= */
 
 #InfoContainer {
-    border-color: #fff;
-    position: absolute;
-    top: 10%;
-    left: calc(50% - 400px);   /* 400 = 800/2 */
+    position: relative;
+    margin: 10vh auto 50px;
     width: 800px;
     height: auto;
     padding: 0 50px 0 50px;
@@ -179,6 +197,22 @@ button {
     overflow-y: visible;
 }
 
+.AboutMeOutline h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin: 16px 0 2px;
+    line-height: 1.2;
+}
+
+.section-accent {
+    display: block;
+    width: 44px;
+    height: 3px;
+    background: rgb(45, 95, 170);
+    margin: 4px auto 10px;
+    border-radius: 2px;
+}
+
 .AboutMeOutline p, .AboutMeOutline span {
     font-size: large;
 }
@@ -192,15 +226,17 @@ button {
 	border-radius: 25px;
     font-size: 90%;
 }
-div ul {
+.accordion-menu ul {
 	list-style: none;
 	padding: 0 20px 1px;
-    background-color: rgb(163, 163, 163);
+    background-color: rgb(163, 163, 163, 0.4);
 	border-radius: 5px;
+    margin: 0;
 }
-div ul li {
+.accordion-menu ul li {
 	position: relative;
 	padding-top: 1px;
+	cursor: pointer;
 }
 ul li .arrow {
 	position: absolute;
@@ -225,12 +261,12 @@ ul li .arrow:after {
 ul li input[type=checkbox] {
 	position: absolute;
 	cursor: pointer;
-	width: 100px;
+	width: 100%;
 	height: 100%;
-    right: -20px;
-    z-index: 1;    
-    opacity: 0;
-
+    top: 0;
+    left: 0;
+	z-index: 1;
+	opacity: 0;
 }
 ul li input[type=checkbox]:checked ~ p {
 	margin-top: 0;
@@ -244,8 +280,8 @@ ul li input[type=checkbox]:checked ~ .arrow:before {
 ul li input[type=checkbox]:checked ~ .arrow:after {
 	transform: translate(-5px, 0) rotate(-45deg);
 }
-.transition, p, ul li .arrow:before, ul li .arrow:after {
-	transition: all 0.5s ease-out;
+.accordion-menu p, ul li .arrow:before, ul li .arrow:after {
+    transition: all 0.5s ease-out;
 }
 
 /* =========================================
@@ -261,16 +297,32 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     overflow-y: visible;
 }
 
-.SkillsOutline p {
+.SkillsOutline h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin: 16px 0 2px;
+    line-height: 1.2;
+}
+
+.SkillsOutline > p {
     text-align: left;
     margin-left: 0px;
     font-size: larger;
 }
 
+.skills-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+    justify-content: flex-start;
+}
+
 .skill {
-    float: left;
+    display: flex;
+    align-items: center;
     position: relative;
-    margin: 0 0 20px 10px;
+    margin: 0;
     background-color: rgb(146, 146, 146);
     border-radius: 25px;
     border-style: solid;
@@ -279,7 +331,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     width: auto;
     height: 40px;
     z-index: 2;
-
+    padding: 0 10px 0 0;
 }
 
 .skill img {
@@ -294,10 +346,6 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 .skill span {
     font-size: large;
     font-weight: 400;
-    position: relative;
-    top: -13px;
-    left: -10px;
-    margin: 10px;
 }
 
 /* =========================================
@@ -313,6 +361,14 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     overflow-x: hidden;
     border-radius: 25px;
 }
+
+.Timeline h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin: 16px 0 2px;
+    line-height: 1.2;
+}
+
 /* Header */
 .TimelineHeader {
     position: relative;
@@ -408,11 +464,11 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     box-sizing: border-box;
     width: 45%;
     height: inherit;
-    padding: -5px 0 0 0;
+    padding: 0;
     z-index: 3;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
     background-color: rgb(139, 144, 160);
+    cursor: pointer;
 }
 
 .Thin {
@@ -423,36 +479,44 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     float: left;
     border-right: solid;
     border-width: 30px;
-    border-color: rgb(0, 45, 112); 
+    border-color: rgb(0, 45, 112);
 }
 
 .Right {
     float: right;
     border-left: solid;
     border-width: 30px;
-    border-color: rgb(0, 45, 112); 
+    border-color: rgb(0, 45, 112);
 }
 
 .Left h1, .Right h1 {
     font-size: large;
     text-align: left;
-    padding: 0 0 0 15px;
-    line-height: 50%;
+    padding: 10px 0 3px 15px;
+    line-height: 1.2;
+    margin: 0;
 }
 
-.Left h2, .Right h2{
+.Left h2, .Right h2 {
     font-size: small;
     text-align: left;
     font-style: italic;
     font-weight: normal;
-    padding: 0 0 0 15px;
-    line-height: 45%;;
+    padding: 2px 0 4px 15px;
+    line-height: 1.2;
+    margin: 0;
 }
 
 .Left p, .Right p {
-    text-align:justify;
-    width: 550px;
-    margin: 0 0 0 8%;
+    text-align: justify;
+    width: auto;
+    margin: 0 5% 0 8%;
+}
+
+/* Hide paragraph content in collapsed cards; revealed when id="large" is set */
+.Left:not([id="large"]) p,
+.Right:not([id="large"]) p {
+    display: none;
 }
 
 .img_container {
