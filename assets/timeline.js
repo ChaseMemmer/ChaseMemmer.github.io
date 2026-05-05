@@ -9,11 +9,11 @@ function collapseCard(el) {
     el.removeAttribute('id');
     el.offsetHeight; // force reflow
 
-    // Reset any paragraph styles applied during expand
-    var paragraphs = el.querySelectorAll('p');
-    for (var i = 0; i < paragraphs.length; i++) {
-        paragraphs[i].style.opacity = '';
-        paragraphs[i].style.transition = '';
+    // Reset any content styles applied during expand
+    var contentEls = el.querySelectorAll('p, img, .img_container');
+    for (var i = 0; i < contentEls.length; i++) {
+        contentEls[i].style.opacity = '';
+        contentEls[i].style.transition = '';
     }
 
     el.style.overflow = 'hidden';
@@ -45,11 +45,11 @@ function expandCard(el) {
     el.firstElementChild.style.display = 'none';
     var finalHeight = el.offsetHeight; // force reflow + capture
 
-    // Keep paragraphs invisible during width animation to prevent text reflow
-    var paragraphs = el.querySelectorAll('p');
-    for (var i = 0; i < paragraphs.length; i++) {
-        paragraphs[i].style.transition = 'none';
-        paragraphs[i].style.opacity = '0';
+    // Keep text and images invisible during width animation to prevent reflow jerk
+    var contentEls = el.querySelectorAll('p, img, .img_container');
+    for (var i = 0; i < contentEls.length; i++) {
+        contentEls[i].style.transition = 'none';
+        contentEls[i].style.opacity = '0';
     }
 
     // Reset to collapsed width with height already at its final value
@@ -68,10 +68,10 @@ function expandCard(el) {
             el.style.overflow = 'visible';
             el.style.transition = '';
             el.removeEventListener('transitionend', cleanup);
-            // Fade in paragraphs after the card has fully expanded
-            for (var j = 0; j < paragraphs.length; j++) {
-                paragraphs[j].style.transition = 'opacity 0.4s ease';
-                paragraphs[j].style.opacity = '1';
+            // Fade in all content after the card has fully expanded
+            for (var j = 0; j < contentEls.length; j++) {
+                contentEls[j].style.transition = 'opacity 0.4s ease';
+                contentEls[j].style.opacity = '1';
             }
         }
     });
