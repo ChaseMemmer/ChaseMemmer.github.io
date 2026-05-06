@@ -61,8 +61,8 @@ nav {
     justify-content: flex-end;
     align-items: center;
     z-index: 100;
-    background-color: rgba(38, 38, 38, 0.92);
-    backdrop-filter: blur(6px);
+    background-color: rgba(38, 38, 38, 0);
+    backdrop-filter: none;
 }
 nav ul {
     display: flex;
@@ -142,7 +142,7 @@ Profile Box
 #ProfileTextContainer{
     position:absolute;
     left: 340px;
-    top: 200px;
+    top: 145px;
     z-index: 1;
     font-size: 130%;
     line-height: normal;
@@ -155,13 +155,13 @@ Profile Box
 #QuickInfoQs{
     position: absolute;
     text-align: left;
-    top: 190px;
+    top: 75px;
     line-height: 90%;
 }
 
 #QuickInfoAs{
     position: absolute;
-    top: 190px;
+    top: 75px;
     left: 50%;
     text-align: left;
     line-height: 90%;
@@ -420,7 +420,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 
 .Today {
     position: relative;
-    margin: 53px auto 0;
+    margin: 28px auto 0;
     width: 75px;
     height: 50px;
     background-color: rgb(48, 89, 151);
