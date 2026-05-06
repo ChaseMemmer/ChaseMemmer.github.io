@@ -142,7 +142,7 @@ Profile Box
 #ProfileTextContainer{
     position:absolute;
     left: 340px;
-    top: 145px;
+    top: 100px;
     z-index: 1;
     font-size: 130%;
     line-height: normal;
@@ -153,19 +153,23 @@ Profile Box
 }
 
 #QuickInfoQs{
-    position: absolute;
+    display: inline-block;
+    vertical-align: top;
     text-align: left;
-    top: 75px;
     line-height: 90%;
 }
 
 #QuickInfoAs{
-    position: absolute;
-    top: 75px;
-    left: 50%;
+    display: inline-block;
+    vertical-align: top;
     text-align: left;
     line-height: 90%;
     color: #000;
+    margin-left: 20px;
+}
+
+#QuickInfoQs p, #QuickInfoAs p {
+    margin: 0;
 }
 
 .colorful:hover {
@@ -412,9 +416,9 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 }
 
 .TimelineHeader span {
-    margin-top: 53px;
     font-size: larger;
     font-weight: bolder;
+    margin-bottom: 8px;
     /* text-decoration: underline; */
 }
 
@@ -625,7 +629,6 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 ========================================= */
 
 #ResumeViewer {
-    position: absolute;
-    left: 10%;
-    top: 10%;
+    display: block;
+    margin: 8% auto;
 }
