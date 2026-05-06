@@ -142,15 +142,14 @@ Profile Box
 #ProfileTextContainer{
     position:absolute;
     left: 340px;
-    top: 195px;
+    top: 200px;
     z-index: 1;
     font-size: 130%;
     line-height: normal;
     text-align: left;
-    transform: translateY(-50%);
 }
 #ProfileTextContainer > p {
-    margin: 4px 0;
+    margin: 0;
 }
 
 #QuickInfoQs{
@@ -429,26 +428,21 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     border-style: hidden;
     border-radius:25px;
     font-size: medium;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .Today p {
     color: #262626;
-    line-height: 1.2;
+    line-height: 50px;
     font-style: italic;
     font-weight: 600;
     margin: 0;
     text-align: center;
 }
 
-.TimelineFooter .Today {
-    font-size: small;
-}
-
 .TimelineFooter .Today p {
     font-size: small;
+    line-height: 1.2;
+    padding: 9px 0;
 }
 
 .Line {
