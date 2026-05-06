@@ -155,13 +155,13 @@ Profile Box
 #QuickInfoQs{
     position: absolute;
     text-align: left;
-    top: 90%;
+    top: 190px;
     line-height: 90%;
 }
 
 #QuickInfoAs{
     position: absolute;
-    top: 90%;
+    top: 190px;
     left: 50%;
     text-align: left;
     line-height: 90%;
@@ -420,7 +420,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 
 .Today {
     position: relative;
-    margin: auto;
+    margin: 53px auto 0;
     width: 75px;
     height: 50px;
     background-color: rgb(48, 89, 151);
@@ -439,6 +439,9 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     text-align: center;
 }
 
+.TimelineFooter .Today {
+    margin-top: 0;
+}
 .TimelineFooter .Today p {
     font-size: small;
     line-height: 1.2;
