@@ -1,8 +1,27 @@
+@font-face {
+    font-family: 'Garamond';
+    src: url('/assets/Fonts/GARA.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Garamond';
+    src: url('/assets/Fonts/GARABD.TTF') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Garamond';
+    src: url('/assets/Fonts/GARAIT.TTF') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 body {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Garamond', Georgia, serif;
     background-color: #262626;
     min-width: 1000px;
 }
@@ -292,7 +311,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     max-height: 1000px;
 }
 .accordion-menu p, ul li .arrow:before, ul li .arrow:after {
-    transition: all 0.375s ease-in-out;
+    transition: all 0.56s ease-in-out;
 }
 
 /* =========================================
@@ -474,7 +493,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     position: relative;
     box-sizing: border-box;
     width: 45%;
-    height: 75px;
+    height: 55px;
     padding: 0;
     z-index: 3;
     overflow: hidden;

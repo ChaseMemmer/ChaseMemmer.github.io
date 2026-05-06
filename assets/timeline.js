@@ -1,7 +1,7 @@
 var allCards = document.querySelectorAll('.Left, .Right');
 
 function getCollapsedHeight(el) {
-    return el.classList.contains("Thin") ? 55 : 75;
+    return 55;
 }
 
 function collapse(el) {
