@@ -492,7 +492,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 .centerline {
     position: absolute;
     left: calc(50% - 4px);
-    top: -12%;
+    top: -25%;
     width: 8px;
     height: 125%;
     background-color: rgba(45, 95, 170,0.4);
@@ -501,9 +501,10 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 
 .marker {
     position: absolute;
-    left: calc(50% - 50px);
-    top: calc(50% - 50px);
-    width: 124px;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+    width: 70px;
+    height: 40px;
     z-index: 3;
 }
 
