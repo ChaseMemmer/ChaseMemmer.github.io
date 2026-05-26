@@ -614,7 +614,9 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 .Left:not([id="large"]) > img,
 .Right:not([id="large"]) > img,
 .Left:not([id="large"]) > .img_container,
-.Right:not([id="large"]) > .img_container {
+.Right:not([id="large"]) > .img_container,
+.Left:not([id="large"]) > ul,
+.Right:not([id="large"]) > ul {
     display: none;
 }
 
@@ -624,7 +626,9 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 .Left.expanding > img,
 .Right.expanding > img,
 .Left.expanding > .img_container,
-.Right.expanding > .img_container {
+.Right.expanding > .img_container,
+.Left.expanding > ul,
+.Right.expanding > ul {
     visibility: hidden;
 }
 
@@ -641,6 +645,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     width: 100%;
     height: 63px;
     background-color: #262626;
