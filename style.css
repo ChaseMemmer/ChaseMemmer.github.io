@@ -151,6 +151,13 @@ Profile Box
 #InfoContainer #ProfileTextContainer > p {
     margin: 0;
 }
+#InfoContainer #ProfileTextContainer > p:nth-child(2) {
+    margin-bottom: 0.5em;
+}
+
+#QuickInfoQs, #QuickInfoAs {
+    font-size: 0.85em;
+}
 
 #QuickInfoQs{
     display: inline-block;
@@ -487,7 +494,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 .Line {
     position: relative;
     margin: auto;
-    width: 8px;
+    width: 10px;
     height: 40px;
     background-color: rgba(45, 95, 170,0.4);
     border-style: hidden;
@@ -504,8 +511,8 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 
 .Line2 {
     position: absolute;
-    left: calc(50% - 4px);
-    width: 8px;
+    left: calc(50% - 5px);
+    width: 10px;
     height: 20px;
     top: -35%;
     background-color: rgba(45, 95, 170,0.4);
@@ -517,16 +524,16 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     position: relative;
     margin: auto;
     width: 100%;
-    min-height: 70px;
+    min-height: 80px;
     display: flow-root;
     z-index: 1;
 }
 
 .centerline {
     position: absolute;
-    left: calc(50% - 4px);
+    left: calc(50% - 5px);
     top: 0;
-    width: 8px;
+    width: 10px;
     height: 100%;
     background-color: rgba(45, 95, 170,0.4);
     z-index: 1;
@@ -534,10 +541,10 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 
 .marker {
     position: absolute;
-    left: calc(50% - 15.7px);
-    top: 19.3px;
-    width: 55px;
-    height: 31.4px;
+    left: calc(50% - 8.6px);
+    top: 31.4px;
+    width: 30px;
+    height: 17.1px;
     z-index: 3;
 }
 
@@ -547,7 +554,8 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     box-sizing: border-box;
     width: 45%;
     height: 63px;
-    margin-top: 3.5px;
+    margin-top: 8.5px;
+    margin-bottom: 8.5px;
     padding: 0;
     z-index: 3;
     overflow: hidden;
