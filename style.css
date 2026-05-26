@@ -322,6 +322,7 @@ ul li input[type=checkbox] {
 ul li input[type=checkbox]:checked ~ p {
 	margin-top: 0;
 	max-height: 0;
+	padding-bottom: 0;
 }
 ul li input[type=checkbox]:checked ~ .arrow:before {
 	transform: translate(5px, 0) rotate(45deg);
@@ -332,9 +333,10 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 .accordion-menu p {
     overflow: hidden;
     max-height: 1000px;
+    padding-bottom: 16px;
 }
 .accordion-menu p, ul li .arrow:before, ul li .arrow:after {
-    transition: all 0.56s ease-in-out;
+    transition: all 0.42s ease-in-out;
 }
 
 /* =========================================
