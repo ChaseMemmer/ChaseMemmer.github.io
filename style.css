@@ -142,13 +142,13 @@ Profile Box
 #ProfileTextContainer{
     position:absolute;
     left: 340px;
-    top: 100px;
+    top: 60px;
     z-index: 1;
     font-size: 130%;
     line-height: normal;
     text-align: left;
 }
-#ProfileTextContainer > p {
+#InfoContainer #ProfileTextContainer > p {
     margin: 0;
 }
 
@@ -546,8 +546,8 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     position: relative;
     box-sizing: border-box;
     width: 45%;
-    height: 55px;
-    margin-top: 7.5px;
+    height: 63px;
+    margin-top: 3.5px;
     padding: 0;
     z-index: 3;
     overflow: hidden;
@@ -557,7 +557,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 }
 
 .Thin {
-    height: 55px;
+    height: 63px;
 }
 
 .Left {
@@ -632,7 +632,7 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 55px;
+    height: 63px;
     background-color: #262626;
     transition: all 0.3s ease-in-out;
     opacity: 0.0;

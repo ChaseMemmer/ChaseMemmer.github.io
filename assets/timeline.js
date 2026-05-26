@@ -1,7 +1,7 @@
 var allCards = document.querySelectorAll('.Left, .Right');
 
 function getCollapsedHeight(el) {
-    return 55;
+    return 63;
 }
 
 function collapse(el) {
